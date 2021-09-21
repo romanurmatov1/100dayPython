@@ -34,10 +34,14 @@ def game():
          letter = input(f'\nKaroche yuqordayi odlodon birini harfini girit topmosong man o\'laman, qara lekin: {keyw}')
          if len(letter) == 1:
             if letter in frlist:
-               for x in range(len(frlist)):
-                  if frlist[x] == letter:
-                     keywlist[x] = letter
-                     step += 1
+               if letter not in keyw:
+                  for x in range(len(frlist)):
+                     if frlist[x] == letter:
+                        keywlist[x] = letter
+                        step += 1
+               else:
+                  print('\nBrat aldin giritpadingiz bni :\\n')
+                  life += 1
             else:
                print('\nTopavarmadngqu :|\n')
                life += 1
@@ -46,9 +50,10 @@ def game():
          game()
       elif keyww == rfruit:
          print('Malades brat')
-         sys.exit()
+         exit1 = input()
       else:      
          print('_________________\n|         |\n|         |\n|         |\n|         O \n|       / | \           Indi fedosi yo\'q o\'ldimqu shansam qolmodi\n|       /   \ \n|           ')
+         exit2 = input()
                
          
 game()
