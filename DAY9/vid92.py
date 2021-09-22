@@ -13,6 +13,6 @@ def secret():
    dic["name"] =name;
    dic["bid"] =bid;
    if vo == 'yes':
-      clear()
+      clear();
       
    
